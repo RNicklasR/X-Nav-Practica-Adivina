@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<!--http://derickrethans.nl/leaflet-and-nominatim.html
 
-https://github.com/CursosWeb/Code/tree/master/JS-APIs/leaflet-->
 <html>
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-		<title>Loc Search and Photos</title>
+		<title>Adivina Donde Esta</title>
 
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   		<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
@@ -14,32 +12,49 @@ https://github.com/CursosWeb/Code/tree/master/JS-APIs/leaflet-->
 		<script src="geoloc.js"></script>
 
 		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="jquery-ui.min.css"  />
 		<link rel="stylesheet" href="geoloc.css" />
 
 	</head>
 	<body>
-		<div id="clue">
-			<img id="foto" src="img/cat.jpg"></img>		
+		<div id="clue" class="col-xs-9">
+			<img  id="foto" src="img/mapamundi1.jpg"></img>	
 		</div>
-		<div id="map" ></div>
-		<div id="menu" >
-			<button type="button" >Juego Nuevo</button>
-			<button type="button" >Salir</button>
-			<button type="button" >Click Me!</button>
-			 <label for="dif">Select a difficulty level</label>
-			<select name="dif" id="dif">
-			<option>Easy</option>
-			<option selected="selected">Medium</option>
-			<option>Hard</option>
-			<option>Insane</option>
-			</select>
+
+<div id="menu" class="col-xs-3" >
+
+			<label for="mode">Select a Game Mode</label>
+				<select name="mode" id="mode" class="col-xs-12">
+				<option value="Capitals.json">Capitals</option>
+				<option value="Countries.json"selected="selected">Countries</option>
+				<option value="Monuments.json">Monuments</option>
+				</select>
+
+			<label for="dif">Select a Difficulty Level</label>
+				<select name="dif" id="dif" class="col-xs-12">
+				<option value="6000">Easy</option>
+				<option value="4000" selected="selected">Medium</option>
+				<option value="2000">Hard</option>
+				<option value="1000">Insane</option>
+				</select>
+
+			<button id="start" type="button" class="col-xs-12" onclick="start();">New Game</button>
+			<button type="button" class="col-xs-12" onclick="end();">Exit Game</button>
+			<button type="button" class="col-xs-12" onclick="hist();">History</button>
 		</div>
-		<div id="search">
-		  <input type="text" name="addr" value="" id="addr" size="10" />
-		  <button type="button" onclick="addr_search();">Search</button>
-		  <div id="results"/>
+
+
+
+		<div id="map" class="col-xs-9"></div>
+		<div id="hist" class="col-xs-3" >
+			<div id="solu"></div>
+			<div id="H"><h3>HISTORY<h3></div>
+			<div id="historial"></div>
+
+
 		</div>
+		
 
 	</body>
 </html>
