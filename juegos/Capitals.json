@@ -1,0 +1,47 @@
+
+{ "type": "FeatureCollection",
+    "features": [
+      { "type": "Feature",
+        "properties": {"name": "Washington D.C."},
+        "coordinates": [38.9047,-77.0164]
+        },
+      {
+        "type": "Feature",
+        "properties": {"name": "Roma"},
+        "coordinates": [41.90000, 12.5000]
+        },
+      { "type": "Feature",
+        "properties": {"name": "Beijing"}, 
+        "coordinates": [39.9157, 116.3833]
+        },
+      {
+        "type": "Feature",
+        "properties": {"name": "Berlin"},
+        "coordinates": [52.5167, 13.3833]
+        },
+      { "type": "Feature",
+        "properties": {"name": "Sidney"},
+        "coordinates": [-33.857058, 151.214897]
+        },
+      { "type": "Feature",
+        "properties": {"name": "Nueva Delhi"},
+        "coordinates": [28.6139, 77.2090]
+        },
+      { "type": "Feature",
+        "properties": {"name": "Cairo"},
+        "coordinates": [29.9761, 31.1311]
+        },
+      { "type": "Feature",
+        "properties": {"name": "Moscow"},
+        "coordinates": [55.7500, 37.6167]
+        },
+      { "type": "Feature",
+        "properties": {"name": "Madrid"},
+        "coordinates": [40.4000, 3.7167]
+        },
+      { "type": "Feature",
+        "properties": {"name": "Paris"},
+        "coordinates": [48.8582, 2.2945]
+        }
+       ]
+}

@@ -1,0 +1,49 @@
+
+
+{ "type": "FeatureCollection",
+    "features": [
+      { "type": "Feature",
+        "properties": {"name": "Taj Mahal"},
+        "coordinates": [27.174167, 78.042222]
+        },
+      {
+        "type": "Feature",
+        "properties": {"name": "Torre de Pisa"},
+        "coordinates": [43.723056, 10.396417]
+        },
+      { "type": "Feature",
+        "properties": {"name": "Muralla China"}, 
+        "coordinates": [34.385675, 103.784549]
+        },
+      {
+        "type": "Feature",
+        "properties": {"name": "Machu Picchu"},
+        "coordinates": [-13.163056, -72.545556]
+        },
+      { "type": "Feature",
+        "properties": {"name": "Opera de Sidney"},
+        "coordinates": [-33.857058, 151.214897]
+        },
+      { "type": "Feature",
+        "properties": {"name": "Chichen Itza"},
+        "coordinates": [20.6829, -88.568676]
+        },
+      { "type": "Feature",
+        "properties": {"name": "Piramides de Giza"},
+        "coordinates": [29.9761, 31.1311]
+        },
+      { "type": "Feature",
+        "properties": {"name": "Angkor Wat"},
+        "coordinates": [13.4125, 103.8667]
+        },
+      { "type": "Feature",
+        "properties": {"name": "Petra"},
+        "coordinates": [30.3286, 35.4419]
+        },
+      { "type": "Feature",
+        "properties": {"name": "Torre Eiffel"},
+        "coordinates": [48.8582, 2.2945]
+        }
+       ]
+}
+

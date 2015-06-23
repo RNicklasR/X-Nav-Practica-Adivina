@@ -1,0 +1,52 @@
+
+{ "type": "FeatureCollection",
+    "features": [
+      { "type": "Feature",
+        "properties": {"name": "España"},
+        "coordinates": [40.433333, -3.683333]
+        },
+      { "type": "Feature",
+        "properties": {"name": "Francia"},
+        "coordinates": [46.298288, 2.774309]
+        },
+      {
+        "type": "Feature",
+        "properties": {"name": "Italia"},
+        "coordinates": [42.403902, 12.969621]
+        },
+      { "type": "Feature",
+        "properties": {"name": "Inglaterra"},
+        "coordinates": [52.560251, -1.664167]
+        },
+      { "type": "Feature",
+        "properties": {"name": "Argentina"},
+        "coordinates": [-34.546480, -65.560651]
+        },
+      { "type": "Feature",
+        "properties": {"name": "Estados Unidos"},
+        "coordinates": [39.663970, -101.303021]
+        },
+      {
+        "type": "Feature",
+        "properties": {"name": "Japón"},
+        "coordinates": [36.446813, 138.770221]
+        },
+      { "type": "Feature",
+        "properties": {"name": "China"}, 
+        "coordinates": [34.385675, 103.784549]
+        },
+      {
+        "type": "Feature",
+        "properties": {"name": "Brasil"},
+        "coordinates": [-8.346419, -55.716901]
+        },
+      { "type": "Feature",
+        "properties": {"name": "Canadá"},
+        "coordinates": [60.270276, -111.615339]
+        },
+      { "type": "Feature",
+        "properties": {"name": "Alemania"},
+        "coordinates": [50.823907, 10.354876]
+        }
+       ]
+}
