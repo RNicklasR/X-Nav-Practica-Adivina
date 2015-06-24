@@ -16,7 +16,7 @@ Detalles del enunciado en el programa de la asignatura.
 	Peculiaridades: Debido a diferentes circunstancias no he podido dedicar a esta practica el tiempo que huebiera deseado. No 		obstante, durante el curso he podido desarrollar muchos más aspectos de la asignatura quie no han quedado plasmados en este 		trabajo, entre ellos, el desarrollo a lo largo del cuatrimestre de una [pagina web](http://rnicklasr.github.io/kti).
 	Por si quisieran echarle un vistazo.
 ## web
-	URL video: [YOUTUBE](https://youtu.be/UFDKMeLzBSO)
+	URL video: [YOUTUBE](http://youtu.be/UFDKMeLzBSO)
 	
 
 
