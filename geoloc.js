@@ -9,6 +9,7 @@ var timer = '';
 var user;
 var solucion;
 var estado = 0;
+var ngames=0;
 var final;
 var juegoVal;
 var markers;
@@ -23,12 +24,22 @@ var markers;
 	$("#solu").html("");
 	getJson(mode);
 
+	map.remove();
+	map = L.map('map').setView([40.2838, -3.8215], 2);
+	markers = new L.FeatureGroup();
+    $('#H').hide();
+
+	L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+		attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+	}).addTo(map);
+
+
     map.on('click', function(e) {
             check(e.latlng);
             clearInterval(timer);
 	    html = "<img  id=\"foto\"  src='img/the-end.jpg'>";           
             $("#clue").html(html);
-	map.off(e);
+	
     });
 
 }	
@@ -109,11 +120,11 @@ function check(usuario){
 	map.addLayer(markers);
         //map.off();
 
-        clearInterval(timer)
-        distancia = Math.round(usuario.distanceTo(solucion.getLatLng()))
+        clearInterval(timer);
+        dist = Math.round(usuario.distanceTo(solucion.getLatLng()));
         
 
-        html = "<p>Your guess was " + distancia/1000 + " Km appart</p><p>You earned: " + distancia*i + " points!</p>";           
+        html = "<p>Your guess was " + dist/1000 + " Km appart</p><p>You earned: " + dist*i + " points!</p>";           
         $("#solu").html(html) 
 
         if(mode== 'Capitals.json'){
@@ -132,7 +143,7 @@ function check(usuario){
         date = date.toString(date)
         date= date.split(' ')[2] + ' ' + date.split(' ')[1] + ' ' + date.split(' ')[3] 
 
-        object={puntuacion:distancia*i,
+        object={puntuacion:dist*i,
                 juego: mode,
                 dificultad:$("#dif option:selected").val(),
                 date: date
@@ -149,13 +160,18 @@ function check(usuario){
 
 
     function hist1(num){
+console.log(estado);
+console.log(num);
+	    ngames=ngames++;
             final = -estado + num;
+
 console.log(final);
             if(final != 0){
-                    history.go(final);
 
-            }else{
+	
                     history.go(final);
+            }else{
+
                 $( "#start" ).trigger( "click" );
 
             }
@@ -176,17 +192,30 @@ $(document).ready(function() {
 		}).addTo(map);
 		
 		window.onpopstate = function(event){
-console.log("cree q estaba en"+estado);
+
+			//if(ngames>1){
+			console.log("meto" + estado);
+       		    history.pushState(object,null,'?'+ estado );
+//}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 			dif = event.state.dificultad;
-alert(event.state.juego);
 			mode = event.state.juego;
 			getJson(mode);
+			map.remove();
+			map = L.map('map').setView([40.2838, -3.8215], 2);
+			markers = new L.FeatureGroup();
+		    $('#H').hide();
+
+			L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+				attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+			}).addTo(map);
 			map.on('click', function(e) {;
 			    check(e.latlng);
         		    clearInterval(timer);
 			    html = "<img  id=\"foto\"  src='img/the-end.jpg'>";           
 			    $("#clue").html(html);
-console.log("y ahora en "+estado);
+
 			});
 
 		};

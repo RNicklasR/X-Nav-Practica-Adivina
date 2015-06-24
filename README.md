@@ -8,4 +8,6 @@ La práctica consiste en la creación de una aplicación HTML5 que permita jugar
 
 Detalles del enunciado en el programa de la asignatura.
 
-## Enunciado
+## Datos
+
+	nombre de cuenta: rnicklas
